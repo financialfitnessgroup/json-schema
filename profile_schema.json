@@ -1,0 +1,171 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string"
+      },
+      "summary": {
+        "type": "object",
+        "properties": {
+          "names": {
+            "type": "array",
+            "items": [
+              {
+                "type": "object",
+                "properties": {
+                  "key": {
+                    "type": "string"
+                  },
+                  "type": {
+                    "type": "string"
+                  },
+                  "values": {
+                    "type": "array",
+                    "items": [
+                      {
+                        "type": "string"
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          "roles": {
+            "type": "array",
+            "items": [
+              {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "scope": {
+                    "type": "string"
+                  },
+                  "displayAs": {
+                    "type": "string"
+                  }
+                }
+              }
+            ]
+          },
+          "status": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "displayAs": {
+                "type": "string"
+              }
+            }
+          },
+          "lastLoginAt": {
+            "type": "string"
+          },
+          "sortingName": {
+            "type": "string"
+          },
+          "firstLoginAt": {
+            "type": "string"
+          },
+          "reportingName": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "names",
+          "roles",
+          "status",
+          "lastLoginAt",
+          "sortingName",
+          "firstLoginAt",
+          "reportingName"
+        ]
+      },
+      "personId": {
+        "type": "string"
+      },
+      "accountId": {
+        "type": "string"
+      },
+      "channelId": {
+        "type": "string"
+      },
+      "attributes": {
+        "type": "array",
+        "items": [
+          {
+            "type": "object",
+            "properties": {
+              "key": {
+                "type": "string"
+              },
+              "value": {
+                "type": "object",
+                "properties": {
+                  "asObject": {
+                    "type": "object",
+                    "properties": {
+                      "emailAddress": {
+                        "type": "object",
+                        "properties": {
+                          "address": {
+                            "type": "string"
+                          },
+                          "isVerified": {
+                            "type": "boolean"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "asString": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "properties": {
+              "key": {
+                "type": "string"
+              },
+              "value": {
+                "type": "object",
+                "properties": {
+                  "asObject": {
+                    "type": "object",
+                    "properties": {
+                      "emailAddressPrincipal": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "asString": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "isReportable": {
+        "type": "boolean"
+      }
+    },
+    "required": [
+      "id",
+      "summary",
+      "personId",
+      "accountId",
+      "channelId",
+      "attributes",
+      "isReportable"
+    ]
+  }
